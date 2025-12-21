@@ -1,0 +1,11 @@
+.github/
+.mvnw/
+.mvn/
+.gitattributes
+
+mvnw
+mvnw.cmd
+
+k8s/
+target/
+Dockerfile
