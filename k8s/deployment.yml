@@ -20,6 +20,18 @@ spec:
         image: us-central1-docker.pkg.dev/project-3a299cbc-eb46-46b5-b07/registry-demo/demo:latest
         ports:
         - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 10
         resources:
           requests:
             memory: "256Mi"

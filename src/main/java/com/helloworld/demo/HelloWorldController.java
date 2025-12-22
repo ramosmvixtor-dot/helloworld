@@ -5,10 +5,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloWorldController {
-	
+
 	@GetMapping("/helloworld")
-	public String hello(){
+	public String hello() {
 		return "Hello World";
+	}
+
+	@GetMapping("/")
+	public String root() {
+		return "Service is Up";
 	}
 
 }
