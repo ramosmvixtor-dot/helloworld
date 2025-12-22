@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-deployment
+  namespace: helloworld
+  labels:
+    app: helloworld
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: helloworld
+  template:
+    metadata:
+      labels:
+        app: helloworld
+    spec:
+      containers:
+      - name: app
+        image: us-central1-docker.pkg.dev/project-3a299cbc-eb46-46b5-b07/registry-demo/demo:latest
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "500Mi"
+            cpu: "200m"
+          limits:
+            memory: "1000Mi"
+            cpu: "300m"

@@ -6,7 +6,6 @@
 mvnw
 mvnw.cmd
 
-k8s/
 target/
 
 # Terraform
