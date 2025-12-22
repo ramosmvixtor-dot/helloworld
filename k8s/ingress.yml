@@ -10,8 +10,8 @@ spec:
   rules:
   - http:
       paths:
-      - path: /helloworld
-        pathType: Prefix
+      - path: /*
+        pathType: ImplementationSpecific
         backend:
           service:
             name: helloworld-service
