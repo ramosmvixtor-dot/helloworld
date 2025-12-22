@@ -80,7 +80,7 @@ jobs:
       - name: Update Deployment Image
         run: |
           IMAGE_TAG=${{ vars.GCP_REGION }}-docker.pkg.dev/${{ vars.GCP_PROJECT_ID }}/${{ vars.GCP_REPO_NAME }}/${{ github.event.repository.name }}:${{ github.sha }}
-          sed -i "s|image: .*|image: $IMAGE_TAG|g" k8s/deployment.yml
+          sed -i "s|image: .*|image: $IMAGE_TAG|g" k8s/10-deployment.yml
 
       - name: Deploy to GKE
         run: |
