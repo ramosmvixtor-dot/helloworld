@@ -6,6 +6,11 @@ resource "google_container_cluster" "primary" {
   remove_default_node_pool = true
   initial_node_count       = 1
   deletion_protection      = false
+
+  ip_allocation_policy {
+    cluster_secondary_range_name  = "pods-range"
+    services_secondary_range_name = "services-range"
+  }
 }
 
 resource "google_container_node_pool" "nodes" {

@@ -3,10 +3,8 @@ kind: Ingress
 metadata:
   name: helloworld-ingress
   namespace: helloworld
-  annotations:
-    kubernetes.io/ingress.class: "gce"
 spec:
-#  ingressClassName: nginx
+  ingressClassName: "gce"
   rules:
   - http:
       paths:
