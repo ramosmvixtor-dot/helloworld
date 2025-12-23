@@ -1,4 +1,4 @@
-name: Deploy to Artifact Registry
+name: Deploy App
 
 on:
 

@@ -1,4 +1,4 @@
-name: Infrastructure Management
+name: Infra Manager
 
 on:
   workflow_dispatch:
