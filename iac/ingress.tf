@@ -6,10 +6,12 @@ resource "helm_release" "nginx_ingress" {
   create_namespace = true
   timeout          = 600 # 10 minutes wait for installation
 
-  set {
-    name  = "controller.service.type"
-    value = "LoadBalancer"
-  }
+  set = [
+    {
+      name  = "controller.service.type"
+      value = "LoadBalancer"
+    }
+  ]
   
   depends_on = [google_container_node_pool.nodes]
 }
