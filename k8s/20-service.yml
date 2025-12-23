@@ -3,8 +3,6 @@ kind: Service
 metadata:
   name: helloworld-service
   namespace: helloworld
-  annotations:
-    cloud.google.com/neg: '{"ingress": true}'
 spec:
   selector:
     app: helloworld
